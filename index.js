@@ -3,6 +3,7 @@ function getFirstSelector(selector) {
   return firstElement
 }
 
+
 // function getFirstSelector(selector) {
 //   return document.querySelector(selector)
 // }
@@ -27,18 +28,32 @@ function deepestChild() {
 
 
 function increaseRankBy(n) {
-  const rankedLists = document.querySelectorAll('.ranked-list')
-  const firstRankedList = rankedLists[0]
-  const secondRankedList = rankedLists[1]
   
-  let firstRankedListChildren = firstRankedList.children
-  for (let i = 0; i < firstRankedListChildren.length; i++) {
-    let value = parseInt(firstRankedListChildren[i].innerHTML)
+  const rankedLists = document.querySelectorAll('.ranked-list')
+
+  for (let i = 0; i < rankedLists.length; i++) {
+    let  rankedListsChildren = rankedLists.children
+    for (let j = 0; j < rankedListsChildren.length; j++) {
+      let value = parseInt(rankedListsChildren[i].innerHTML)  
+    }
     return value + n
   }
-  
 }
 
-
-
-
+// function increaseRankBy(n) {
+//   const rankedLists = document.querySelectorAll('.ranked-list')
+//   const firstRankedList = rankedLists[0]
+//   const secondRankedList = rankedLists[1]
+  
+//   let firstRankedListChildren = firstRankedList.children
+//   for (let i = 0; i < firstRankedListChildren.length; i++) {
+//     let valueFirstList = parseInt(firstRankedListChildren[i].innerHTML)
+//     valueFirstList + n
+//   }
+  
+//   let secondRankedListChildren = secondRankedList.children
+//   for (let j = 0; j < secondRankedListChildren.length; j++) {
+//     let valueSecondList = parseInt(secondRankedListChildren[j].innerHTML)
+//     valueSecondList + n
+//   }
+// }
