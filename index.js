@@ -32,11 +32,11 @@ function increaseRankBy(n) {
   const rankedLists = document.querySelectorAll('.ranked-list')
 
   for (let i = 0; i < rankedLists.length; i++) {
-    let  rankedListsChildren = rankedLists.children
+    let  rankedListsChildren = rankedLists[i].children
     for (let j = 0; j < rankedListsChildren.length; j++) {
-      let value = parseInt(rankedListsChildren[i].innerHTML)  
+      let value = parseInt(rankedListsChildren[j].innerHTML)  
+      rankedListsChildren[j].innerHTML = value + n
     }
-    return value + n
   }
 }
 
